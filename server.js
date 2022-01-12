@@ -2,11 +2,12 @@ const express = require('express')
 const router = express.Router()
 const app = express()
 const methodOverride = require('method-override')
-
-const PORT = 3000
+require('dotenv').config()
+const PORT = process.env.PORT
 
 const mongoose = require('mongoose')
-const mongoURI = "mongodb://127.0.0.1:27017/movies"
+
+const mongoURI = process.env.MONGODB_URI
 const db = mongoose.connection
 
 
