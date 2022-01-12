@@ -42,6 +42,7 @@ router.get('/seed', async (req, res) => {
 
 ///////////////////////////////INDEX/////////////////////////////////////
 router.get('/' , (req, res) => {
+
     Movie.find({}, (error, allMovies) => {
         console.log(allMovies);
         res.render('index.ejs', {
