@@ -1,1 +1,24 @@
-<h1>new route</h1>
+<%- include('./partials/header.ejs') %>
+<div class="container-fluid">
+<h1>The new Movies Page</h1>
+
+
+
+    <form action="/movies" method="POST">
+        title: <input type="text" name="name" > <br>
+
+        Description: <input type="text" name="description"> <br>
+
+        Img: <input type="text" name="img"> <br>
+
+        genre: <input type= 'text' name="tag"> <br>
+
+        like: <input type="checkbox" name="like"><br>
+        watched: <input type="checkbox" name="watched" >
+        <br>
+        <br>
+        <input type="submit" value="Create Movie" />
+    </form>
+  
+
+</div>

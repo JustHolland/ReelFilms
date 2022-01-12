@@ -1,0 +1,40 @@
+
+body{
+  background-color: black;
+  background-image: url('https://mcdn.wallpapersafari.com/medium/27/37/qN5gKX.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+
+}
+
+.container-fluid{
+
+}
+.nav{
+background: white;
+z-index: 1;
+border-top: 8px solid #bbb;
+border-radius: 5px;
+}
+
+
+
+.showpage{
+  background-color: ;
+}
+
+ul{
+
+}
+
+.top{
+  font-size: 30px;
+  text-align: center;
+  font-family: font-family: 'Fredericka the Great' ;
+
+}
+
+.newform{
+  border-color: red;
+}

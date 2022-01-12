@@ -1,0 +1,32 @@
+<%- include('./partials/header.ejs') %>
+<div class="container-fluid">
+  
+
+
+<form action="/movies/<%= movies.id %>?_method=PUT" method="POST">
+      Title: <input
+      type="text"
+      name="title"
+      value="<%= movies.title %>"> <br/>
+
+      Description: <input type="text"
+      name="description"
+      value="<%= movies.description %>"> <br>
+
+      Img: <input type="url"
+      name="img"
+      value="<%= movies.img %>"> <br>
+
+      tags: <input type="text"
+      name="tags"
+      value="<%= movies.tag %>"> <br>
+
+      like: <input type="text"
+      name="like"
+      value="<%= movies.like %>">
+       <br>
+
+      <input type="submit" value="Submit">
+
+  </form>
+<div class="container-fluid">

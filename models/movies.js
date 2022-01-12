@@ -2,11 +2,12 @@ const mongoose = require('mongoose')
 const {Schema, model} = mongoose
 
 const moviesSchema = new Schema({
-    name: String,
-    description: String,
-    img: String,
-    price: Number,
-    quantity: Number,
+  title: String,
+  description: String,
+  img: String,
+  genre: String,
+  like: Number,
+  watched: Boolean,
 })
 
 const Movies = model('Movies', moviesSchema)

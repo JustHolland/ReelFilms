@@ -3,14 +3,52 @@ const router = express.Router()
 
 
 
-const Movies = require('../models/movies')
+const Movie = require('../models/movies')
+
+router.get('/seed', async (req, res) => {
+  const newMovie =
+    [
+      {
+        title: 'ATHLETE A ',
+        description: 'follows the intrepid reporters, brave gymnasts, and legal team that put Larry Nassar behind bars and exposed decades of abuse at USA Gymnastics.',
+        img: 'https://i.imgur.com/koFWVhV.png',
+        genre: 'sports, true crime' ,
+        like: 1,
+        watched: false
+      }, {
+        title: 'Beans',
+        description: 'A small pile of beans. Buy more beans for a big pile of beans.',
+        img: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
+        genre: 5,
+        like: 1,
+        watched: false
+      }, {
+        title: 'Beans',
+        description: 'A small pile of beans. Buy more beans for a big pile of beans.',
+        img: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
+        genre: 5,
+        like: 1,
+        watched: false
+      },
+    ]
+
+  try {
+    const seedItems = await Movie.create(Movies)
+    res.send(seedItems)
+  } catch (err) {
+    res.send(err.message)
+  }
+ })
 
 ///////////////////////////////INDEX/////////////////////////////////////
 router.get('/' , (req, res) => {
+    Movie.find({}, (error, allMovies) => {
+        console.log(allMovies);
         res.render('index.ejs', {
+            movies: allMovies
         })
     })
-
+})
 ///////////////////////////////NEW/////////////////////////////////////
 router.get('/new', (req, res) => {
     res.render('new.ejs')
@@ -18,7 +56,7 @@ router.get('/new', (req, res) => {
 
 ///////////////////////////////SHOW/////////////////////////////////////
 router.get('/:id', (req, res) => {
-   Movies.findById(req.params.id, (error, foundMovies) => {
+   Movie.findById(req.params.id, (error, foundMovies) => {
         console.log(foundMovies)
         res.render('show.ejs', {movies: foundMovies})
    })
@@ -26,12 +64,12 @@ router.get('/:id', (req, res) => {
 
 ///////////////////////////////POST/////////////////////////////////////
 router.post('/', (req, res) => {
-  Movies.create(req.body, (error, createdMovies) => {
+  Movie.create(req.body, (error, createdMovie) => {
             if(error) {
             console.log(error)
             res.send(error)
             } else {
-                console.log(createdMovies)
+                console.log(createdMovie)
                 res.redirect('/movies')
               }
   })
@@ -39,12 +77,12 @@ router.post('/', (req, res) => {
 
 ///////////////////////////////DELETE/////////////////////////////////////
 router.delete('/:id', (req, res) => {
-    Movies.findByIdAndDelete(req.params.id, (error, deletedMovies) => {
+    Movie.findByIdAndDelete(req.params.id, (error, deletedMovie) => {
         if(error){
             console.log(error)
             res.send(error)
         }else{
-            console.log(deletedMovies)
+            console.log(deletedMovie)
             res.redirect('/movies')
         }
     })
@@ -52,12 +90,12 @@ router.delete('/:id', (req, res) => {
 
 ///////////////////////////////EDIT/////////////////////////////////////
 router.get('/:id/edit', (req, res) => {
-  Movies.findById(req.params.id, (error, foundMoviess) => {
+  Movie.findById(req.params.id, (error, foundMovies) => {
         if(error){
             console.log(error)
             res.send(error)
         } else {
-             res.render('edit.ejs', {movies: foundMoviess})
+             res.render('edit.ejs', {movies: foundMovies})
           }
   })
 })
@@ -66,12 +104,12 @@ router.get('/:id/edit', (req, res) => {
 
 router.put('/:id', (req, res) => {
     console.log(req.body)
-    Movies.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, updatedMovies)=>{
+    Movie.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, updatedMovie)=>{
         if(error) {
             console.log(error)
             res.send(error)
         }else {
-            console.log(updatedMovies)
+            console.log(updatedMovie)
             res.redirect('/movies')
         }
     })
@@ -80,13 +118,13 @@ router.put('/:id', (req, res) => {
 
 router.put('/:id/like', (req, res) => {
 
-  Movies.findByIdAndUpdate(req.params.id, {$inc: {like: +1} }, (error, likeMovies) => {
+  Movie.findByIdAndUpdate(req.params.id, {$inc: {like: +1} }, (error, likeMovie) => {
         if (error) {
             console.log(error)
             res.send(error)
         }else {
-          Movies.findById(req.params.id, (error, likeMovies) =>{
-            res.render('show.ejs', {movies: likeMovies})
+          Movie.findById(req.params.id, (error, likeMovie) =>{
+            res.render('show.ejs', {movies: likeMovie})
           })
 
         }

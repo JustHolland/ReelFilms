@@ -1,1 +1,27 @@
-<h1>show page</h1>
+<%- include('./partials/header.ejs') %>
+<div class="container-fluid">
+
+
+<h1>This is the show page for <%= movies.title %></h1>
+
+
+
+     <img src =<%= movies.img%> alt="moviePic">
+       <ul>
+         <li> description: <%= movies.description %></li>
+         <li> genre: $<%= movies.genre %></li>
+         <li> like: <%= movies.like %></li>
+         <li> watched: <%= movies.watched %></li>
+       </ul>
+
+     <form action = "/movies/<%=movies._id%>/like?_method=PUT" method="POST" class= "likebtn">
+         <input type="submit" value="Like"><br>
+       </form>
+
+     <button class = 'editbtn'><a href="/movies/<%=movies._id%>/edit">Edit</a></button>
+
+
+         <form action="/movies/<%=movies._id%>?_method=DELETE" method="POST" class= "deletebtn">
+             <input type="submit" value="Delete"><br>
+       </form>
+     </div>
