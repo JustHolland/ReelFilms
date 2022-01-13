@@ -1,24 +1,35 @@
 <%- include('./partials/header.ejs') %>
 <div class="container-fluid">
-<h1>The new Movies Page</h1>
 
 
 
-    <form action="/movies" method="POST">
-        title: <input type="text" name="name" > <br>
 
-        Description: <input type="text" name="description"> <br>
 
-        Img: <input type="text" name="img"> <br>
-
-        genre: <input type= 'text' name="tag"> <br>
-
-        like: <input type="checkbox" name="like"><br>
-        watched: <input type="checkbox" name="watched" >
-        <br>
-        <br>
-        <input type="submit" value="Create Movie" />
-    </form>
-  
-
+<div class="form">
+  <form action="/movies" method="POST">
+     <div class="title">New Movie</div>
+     <div class="subtitle">Lets add a New Movie!</div>
+     <div class="input-container ic1">
+       <input id="title" class="input" type="text" name="title" placeholder=" " />
+       <div class="cut"></div>
+       <label for="title" class="placeholder">Title</label>
+     </div>
+     <div class="input-container ic2">
+       <input id="description" class="input" type="text" name="description" placeholder=" " />
+       <div class="cut"></div>
+       <label for="description" class="placeholder">Description</label>
+     </div>
+     <div class="input-container ic2">
+       <input id="img" class="input" type="text" name="img" placeholder=" " />
+       <div class="cut cut-short"></div>
+       <label for="img" class="placeholder">Paste image URL</>
+     </div>
+     <div class="input-container ic2">
+       <input id="tags" class="input" type="text" name="tags" placeholder=" " />
+       <div class="cut cut-short"></div>
+       <label for="tags" class="placeholder">Add Tags</>
+     </div>
+          <input class="submit" type="submit" value="Create Movie" />
+        </form>
+   </div>
 </div>

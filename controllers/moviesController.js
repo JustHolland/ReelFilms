@@ -12,21 +12,22 @@ router.get('/seed', async (req, res) => {
         title: 'ATHLETE A ',
         description: 'follows the intrepid reporters, brave gymnasts, and legal team that put Larry Nassar behind bars and exposed decades of abuse at USA Gymnastics.',
         img: 'https://i.imgur.com/koFWVhV.png',
-        genre: 'sports, true crime' ,
+        tags: 'sports, true crime' ,
+        like: 1,
+        watched: false,
+        userCreated: true
+      }, {
+        title: 'Beans',
+        description: 'A small pile of beans. Buy more beans for a big pile of beans.',
+        img: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
+        tags: 5,
         like: 1,
         watched: false
       }, {
         title: 'Beans',
         description: 'A small pile of beans. Buy more beans for a big pile of beans.',
         img: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
-        genre: 5,
-        like: 1,
-        watched: false
-      }, {
-        title: 'Beans',
-        description: 'A small pile of beans. Buy more beans for a big pile of beans.',
-        img: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
-        genre: 5,
+        tags: 5,
         like: 1,
         watched: false
       },
@@ -42,7 +43,6 @@ router.get('/seed', async (req, res) => {
 
 ///////////////////////////////INDEX/////////////////////////////////////
 router.get('/' , (req, res) => {
-
     Movie.find({}, (error, allMovies) => {
         console.log(allMovies);
         res.render('index.ejs', {
@@ -126,6 +126,7 @@ router.put('/:id/like', (req, res) => {
         }else {
           Movie.findById(req.params.id, (error, likeMovie) =>{
             res.render('show.ejs', {movies: likeMovie})
+
           })
 
         }

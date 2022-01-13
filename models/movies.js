@@ -5,13 +5,14 @@ const moviesSchema = new Schema({
   title: String,
   description: String,
   img: String,
-  genre: String,
+  tags: String,
   like: Number,
   watched: Boolean,
+  userCreated: Boolean,
 })
 
-const Movies = model('Movies', moviesSchema)
+const Movie = model('Movie', moviesSchema)
 
 
 
-module.exports = Movies
+module.exports = Movie

@@ -1,19 +1,17 @@
 <%- include('./partials/header.ejs') %>
 
-
+<h1>Reel Films Index</h1>
 <div class="container-fluid">
 
-<h1>Movies Index</h1>
-
-
-<ul>
+  <div class="allmovies">
+    <ul>
     <% for(let i = 0; i < movies.length; i++) { %>
-        <li>
-           <a href="/movies/<%=movies[i]._id%>"> <img src="<%=movies[i].img%>" alt="moviesPic"></a>
-
+        <li class = "movie">
+           <a href="/movies/<%=movies[i]._id%>"><%= movies[i].title %> <img src="<%=movies[i].img%>" alt="moviesPic"></a>
         </li>
     <% } %>
-</ul>
+    </ul>
+  </div>
 </div>
 
 
