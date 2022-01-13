@@ -1,6 +1,17 @@
+const mongoose = require('mongoose')
+const Movie = require('./models/movies')
 
+const mongoURI = process.env.MONGODB_URI
+const db = mongoose.connection
 
+mongoose.connect(mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}, () => {
+    console.log('database connected')
+})
 
+Movie.create([
 {
   title: ' The Apollo',
    description: 'The unique history and legacy of New York City’s landmark Apollo Theater is explored in this documentary.',
@@ -153,3 +164,7 @@
    usercreated: 'false',
 
   },
+], (err, data)=>{
+  console.log(data)
+  db.close()
+})

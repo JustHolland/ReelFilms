@@ -7,8 +7,8 @@ const moviesSchema = new Schema({
   img: String,
   tags: String,
   like: Number,
-  watched: Boolean,
-  userCreated: Boolean,
+  watched: String,
+  userCreated: String,
 })
 
 const Movie = model('Movie', moviesSchema)

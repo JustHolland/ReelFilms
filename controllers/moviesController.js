@@ -5,41 +5,10 @@ const router = express.Router()
 
 const Movie = require('../models/movies')
 
-router.get('/seed', async (req, res) => {
-  const newMovie =
-    [
-      {
-        title: 'ATHLETE A ',
-        description: 'follows the intrepid reporters, brave gymnasts, and legal team that put Larry Nassar behind bars and exposed decades of abuse at USA Gymnastics.',
-        img: 'https://i.imgur.com/koFWVhV.png',
-        tags: 'sports, true crime' ,
-        like: 1,
-        watched: false,
-        userCreated: true
-      }, {
-        title: 'Beans',
-        description: 'A small pile of beans. Buy more beans for a big pile of beans.',
-        img: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
-        tags: 5,
-        like: 1,
-        watched: false
-      }, {
-        title: 'Beans',
-        description: 'A small pile of beans. Buy more beans for a big pile of beans.',
-        img: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
-        tags: 5,
-        like: 1,
-        watched: false
-      },
-    ]
 
-  try {
-    const seedItems = await Movie.create(Movies)
-    res.send(seedItems)
-  } catch (err) {
-    res.send(err.message)
-  }
- })
+
+
+
 
 ///////////////////////////////INDEX/////////////////////////////////////
 router.get('/' , (req, res) => {
