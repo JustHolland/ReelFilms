@@ -6,8 +6,10 @@
   <div class="allmovies">
     <ul>
     <% for(let i = 0; i < movies.length; i++) { %>
-        <li class = "movie">
-           <a href="/movies/<%=movies[i]._id%>"><%= movies[i].title %> <img src="<%=movies[i].img%>" alt="moviesPic"></a>
+       <li class = "movie">
+          <h3> <%= movies[i].title %> <h3>
+           <a href="/movies/<%=movies[i]._id%>"><img src="<%=movies[i].img%>" alt="moviesPic"></a>
+
         </li>
     <% } %>
     </ul>

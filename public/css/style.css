@@ -13,10 +13,11 @@ margin-right: 30px;
 }
 
 .container-fluid{
-  align-items: center;
-   display: flex;
-   justify-content: center;
-   height: 100vh;
+  align-items: flex-start;
+display: flex;
+justify-content: center;
+height: 100vh;
+}
 }
 
 .nav{
@@ -31,6 +32,9 @@ h2{
   font-size: 2em;
 }
 
+h3{
+text-align: center;
+}
 .showpage{
   background-color: ;
 }
@@ -53,6 +57,8 @@ ul{
 
 .movie{
   display: inline-block;
+  text-align: center;
+  justify-content: center;
 }
 
 
@@ -77,6 +83,17 @@ ul{
   height: 500px;
   padding: 20px;
   width: 320px;
+}
+
+.eform{
+  background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 500px;
+  padding: 20px;
+  width: 320px;
+  color: #eee;
+  text-align: center;
 }
 
 .title {
@@ -252,4 +269,5 @@ ul{
     }
 img{
   height:150px;
+  margin: 1em;
 }
