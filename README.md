@@ -48,7 +48,7 @@ Project Choice (Tell us which project you're doing!)
 
     General App Idea/Purpose
 
-    Reel Film is full stack app that has information on movies. User can store add movies that are interesting to them specifically documentaries .
+    Reel Film is an app that has information on movies. User can store add movies that are interesting to them specifically documentaries .
 
     Models including field names and their datatypes
 
