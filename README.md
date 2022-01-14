@@ -38,8 +38,70 @@ Justine Holland
 
 * 0.1
     * Initial Release
+## Project proposal Submission
+Project Choice (Tell us which project you're doing!)
+    A name for your Project
+    REELFILMS
 
 
+    Project Description
+    Include:
+
+    General App Idea/Purpose
+
+    Reel Film is full stack app that has information on movies, specifically documentaries .
+
+    Models including field names and their datatypes
+
+    A list of routes (e.g. POST /pins/ allows users to post a picture of a pin)
+
+    Index.- see all movies in DB
+    Show- once user clicks show from index user will see detailed info about movie.
+    New – User will use a form to add a new movie to the DB
+    Create- user will submit form to add movie to DB and show in index
+    Edit – user can edit movie data
+    Delete- user can only delete movies they added to DB
+    Update-  user can click the like button in show route to rate the movie.
+
+
+    Wireframes
+    Wireframes with basic page layouts
+
+     Screen Shot 2022-01-10 at 4 45 44 PM
+
+    Screen Shot 2022-01-10 at 4 45 41 PM
+
+    Copy and paste or drag and drop your images here.
+
+
+    User Stories
+    User stories detailing app functionality
+
+    Add user stories following the As a [type of user], I want [what the user wants], so that [what it helps accomplish] format.
+
+    As a user, I want to view movies and have a title and short description of what I am looking at.
+    As a user, I want to add new movies
+    As a user, I want all buttons to work and go to the correct route.  
+    As a user, I want to be able to like movies
+
+
+
+    MVP Goals
+    Use EJS Partials
+    Make all routes, and buttons functional
+    Get the controllers fully functional and neat
+
+    movieController
+    All movies have an img
+
+
+
+
+    Stretch Goals
+    Use all CSS framework, Materialize to make my page look modern
+    Have the db filter the index for same tags.
+    Have a search bar for movies
+    User has a route to see all the movies the added in their watchlist
 
 ## Acknowledgments
 *DEJA AND BLAKE!
