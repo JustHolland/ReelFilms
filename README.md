@@ -2,7 +2,7 @@
 ReelFilms is a database that contains popular documentaries.
 
 ## Description
-Anyone can access ReelFilms it doesn't require an acoount. The
+Anyone can access ReelFilms it doesn't require an account. The
 user has the ability to view movies, edit movies, add new movies, and delete movies from the library.
 
 ## Getting Started
