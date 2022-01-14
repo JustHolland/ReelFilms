@@ -1,9 +1,9 @@
 # ReelFilms
-ReelFilms is a database that contains popular documents.
+ReelFilms is a database that contains popular documentaries.
 
 ## Description
-Anyone can access ReelFilms, it doesn't require an acoount. The
-user has the ability to view movies, edit movies that are in the library, add new movies to the libraries, and delete movies from the library.
+Anyone can access ReelFilms it doesn't require an acoount. The
+user has the ability to view movies, edit movies, add new movies, and delete movies from the library.
 
 ## Getting Started
 
@@ -17,13 +17,13 @@ Not available
 
 ### Executing program
 
-Program runs online
+Visit https://reelfilm.herokuapp.com/movies
 
 ## Help
 
 Any advise for common problems or issues.
 ```
-command to run if program contains helper info
+Refresh the computer
 ```
 
 ## Authors
