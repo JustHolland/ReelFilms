@@ -9,6 +9,7 @@ const moviesSchema = new Schema({
   like: Number,
   watched: String,
   userCreated: String,
+  userReviews: String,
 })
 
 const Movie = model('Movie', moviesSchema)

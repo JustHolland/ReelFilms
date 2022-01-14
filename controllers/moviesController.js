@@ -101,5 +101,36 @@ router.put('/:id/like', (req, res) => {
         }
     })
 })
+router.put('/:id/like', (req, res) => {
+
+  Movie.findByIdAndUpdate(req.params.id, {$inc: {like: +1} }, (error, likeMovie) => {
+        if (error) {
+            console.log(error)
+            res.send(error)
+        }else {
+          Movie.findById(req.params.id, (error, likeMovie) =>{
+            res.render('show.ejs', {movies: likeMovie})
+
+          })
+
+        }
+    })
+})
+router.put('/:id/like', (req, res) => {
+
+  Movie.findByIdAndUpdate(req.params.id, {$inc: {like: +1} }, (error, likeMovie) => {
+        if (error) {
+            console.log(error)
+            res.send(error)
+        }else {
+          Movie.findById(req.params.id, (error, likeMovie) =>{
+            res.render('show.ejs', {movies: likeMovie})
+
+          })
+
+        }
+    })
+})
+
 
 module.exports = router

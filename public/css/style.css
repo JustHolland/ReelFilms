@@ -107,10 +107,10 @@ ul{
   margin: 0;
   display: flex;
   padding: 0;
-  overflow: hidden;
+  overflow: scroll;
   text-transform: uppercase;
   font-weight: 500;
-  color:#e8ecede0;
+  color:##3936689c;
   letter-spacing: 1px;
 }
 ul a:hover{
@@ -132,11 +132,22 @@ a{
   height:60vh;
 }
 
+.showmovies{
+  display: block;
+  font-size: 1em;
+  text-transform: none;
+  text-align: start;
+}
+
 .movie{
   display: inline-block;
   text-align: center;
   justify-content: center;
 }
+.hide{
+  display: none;
+}
+
 
 
 .top{
@@ -340,7 +351,7 @@ a{
       background-color: #0188ddb8;
       border-radius: 20px;
       box-sizing: border-box;
-      height: 400px;
+      height: 40em;
       padding: 20px;
       width: 30em;
     }

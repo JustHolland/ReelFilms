@@ -5,7 +5,7 @@
       <h2> <%= movies.title %></h2>
       <img src =<%= movies.img%> alt="MoviePic"><br>
 
-      <ul>
+      <ul class= "showmovies">
               <li> Description: <%= movies.description %></li>
               <li> Tags: <%= movies.tags %></li>
               <li> Like: <%= movies.like %></li>
@@ -23,4 +23,9 @@
          </form>
         </div>
       </div>
-     </div>
+     </div><br>
+<div class="container-fluid">
+  <ul class= "postedreview">
+          <li> <%= movies.userReviews%></li>
+  </ul>
+</div>

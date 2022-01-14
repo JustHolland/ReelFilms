@@ -10,8 +10,9 @@
        <li class = "movie">
           <h3> <%= movies[i].title %> <h3>
            <a href="/movies/<%=movies[i]._id%>"><img src="<%=movies[i].img%>" alt="moviesPic"></a>
-
+           <p class= "hide"><%= movies[i].description %></p>
         </li>
+
     <% } %>
     </ul>
   </div>
