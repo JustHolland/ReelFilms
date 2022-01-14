@@ -7,9 +7,7 @@ user has the ability to view movies, edit movies, add new movies, and delete mov
 
 ## Getting Started
 
-### Dependencies
 
-Windows OSX operating system
 
 ### Installing
 
@@ -23,7 +21,8 @@ Visit https://reelfilm.herokuapp.com/movies
 
 Any advise for common problems or issues.
 ```
-Refresh the computer
+Refresh the Browser
+If that doesn't work restart your computer
 ```
 
 ## Authors
@@ -49,7 +48,7 @@ Project Choice (Tell us which project you're doing!)
 
     General App Idea/Purpose
 
-    Reel Film is full stack app that has information on movies, specifically documentaries .
+    Reel Film is full stack app that has information on movies. User can store add movies that are interesting to them specifically documentaries .
 
     Models including field names and their datatypes
 
