@@ -41,7 +41,9 @@ const moviesController = require('./controllers/moviesController')
 
 app.use('/movies', moviesController)
 
-
+app.get('/', (req, res) => {
+    res.redirect('/movies')
+})
 
 app.listen(PORT, () => {
   console.log(`Server is listening on PORT: ${PORT}`)
