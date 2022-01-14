@@ -164,7 +164,7 @@ router.get('/seed', async (req, res) => {
     ]
 
   try {
-    const seedItems = await Product.create(newProducts)
+    const seedItems = await Movie.create(newMovies)
     res.send(seedItems)
   } catch (err) {
     res.send(err.message)
